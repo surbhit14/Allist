@@ -1,4 +1,3 @@
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -51,7 +50,6 @@ passport.deserializeUser(function(id, done) {
     done(err, user);
   });
 });
-
 
 app.get("/", function(req, res){
   res.render("home");
@@ -119,7 +117,6 @@ app.get('/list', (req, res) => {
   })
   
   app.get('/list/:cid',function(req, res) {
-    
     var cid = req.params.cid;
     if(req.isAuthenticated())
     { var address = req.user.wallet;
@@ -147,10 +144,7 @@ app.get('/list', (req, res) => {
         }).on("error", (err) => {
           console.log("Error: " + err.message);
         });
-    
-  
     }
-
   else {
     res.redirect("/login");
   }

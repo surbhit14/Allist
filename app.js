@@ -71,7 +71,6 @@ app.get("/logout", function(req, res){
 });
 
 app.post("/register", function(req, res){
-  console.log(req.body.wallet);
   User.register({username: req.body.username,
     wallet: req.body.wallet,}, req.body.password, function(err, user){
     if (err) {
@@ -125,7 +124,6 @@ app.get('/list', (req, res) => {
     if(req.isAuthenticated())
     { var address = req.user.wallet;
       var url = 'https://api.covalenthq.com/v1/'+cid+'/address/'+address+'/transactions_v2/?key=ckey_1231e418207f49a99fe5676b1a0';
-      console.log(url);
       https.get(url, (resp) => {
           let data = '';
           resp.on('data', (chunk) => {

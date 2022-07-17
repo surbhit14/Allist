@@ -1,14 +1,15 @@
 <%- include("header") %>
 
 <link rel="stylesheet" href="/css/list.css">
-    <h3 id='heading'>Crypto Currencies</h3>
+    <h3 id='heading'>transactions</h3>
     <div style="overflow-x:auto;">
     <table id="cryplist" style="width:100%">
         <tr>
             <th>Sno</th>
             <th>From</th>
             <th>To</th>
-            <th>Name</th>
+            <th></th>
+            <th>Token</th>
             <th>Amount</th>
         </tr>
 
@@ -22,12 +23,15 @@
                 <td>
                     <%=list[i].to_address%>
                 </td>
+                <td>
+
+                </td>
                 <td><%=list2[i].sender_contract_ticker_symbol%>
                 </td>
                 <td>
                     <% var x = (list2[i].decoded.params[2].value).toString() %>
                     <% var y = x.substring(0,3) +"." + x.substring(3) %>
-                    <%=y%>
+                    <%=y.substring(0,11)%>
                 </td>
             </tr>
         <% } %>           

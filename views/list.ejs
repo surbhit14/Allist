@@ -1,0 +1,41 @@
+<%- include("header") %>
+
+<link rel="stylesheet" href="/css/list.css">
+    <h3 id='heading'>Crypto Currencies</h3>
+    <div style="overflow-x:auto;">
+    <table id="cryplist" style="width:100%">
+        <tr>
+            <th>SNo</th>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Chain Id</th>
+            <th>Is Testnet</th>
+        </tr>
+
+        <% for (var i=0;i<list.length;i++) { %>
+            <tr>
+                <td>
+                    <%= i+1 %>
+                </td>
+               
+                <td>
+                        <img src="<%= list[i].logo_url %>" alt="logo" width="50px" height="50px">
+
+                </td>
+                <td>
+                        <a id='xyz' href="/list/<%= list[i].chain_id%>">
+                            <%=list[i].name%>
+                        </a>
+                </td>
+                <td><%=list[i].chain_id%>
+                </td>
+                <td>
+                    <%=list[i].is_testnet%>
+                </td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</body>
+
+</html>

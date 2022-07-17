@@ -1,0 +1,45 @@
+<%- include("header") %>
+
+<link rel="stylesheet" href="/css/list.css">
+    <h3 id='heading'>Crypto Currencies</h3>
+    <div style="overflow-x:auto;">
+    <table id="cryplist" style="width:100%">
+        <tr>
+            <th>Sno</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Name</th>
+            <th>Chain Id</th>
+            <th>Is Testnet</th>
+        </tr>
+
+        <% for (var i=0;i<list.length;i++) { %>
+            <tr>
+                <td>
+                    <%= i+1 %>
+                </td>
+                <td><%=list[i].from_address%>
+                </td>
+                <td>
+                    <%=list[i].to_address%>
+                </td>
+        <% } %>
+        <% for (var i=0;i<list2.length;i++) { %>
+                <td><%=list2[i].sender_contract_ticker_symbol%>
+                </td>
+                <td>
+                    <%=list2[i].decoded.params[2].value%>
+                </td>
+        <% } %>
+            </tr>
+        </table>
+    </div>
+</body>
+
+</html>
+
+Allist 
+All chain transactions at one place 
+
+See transactions of all chains at one place 
+Worries about missing

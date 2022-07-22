@@ -8,6 +8,14 @@
   },
   "author": "Surbhit Agrawal",
   "license": "ISC",
+  "cssnano": {
+    "preset": [
+      "default",
+      {
+        "calc": false
+      }
+    ]
+  },
   "dependencies": {
     "alert": "^5.0.10",
     "body-parser": "^1.19.0",

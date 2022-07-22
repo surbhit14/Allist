@@ -2,9 +2,9 @@
   "name": "allist",
   "version": "1.0.0",
   "description": "Allist is a platform for you to see transactions of all chains at one place ",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "Surbhit Agrawal",
   "license": "ISC",
